@@ -28,6 +28,7 @@ Projenin klasör yapısı aşağıdaki bağlantılar örnek alınarak oluşturul
 
 ## Durum
 
-    **26.02.2019**:
+**26.02.2019**:
 
-        - Klasör Yapısının Oluşturulmasına Başlandıcors
+    - Klasör Yapısının Oluşturulmasına Başlandı
+    - Cors Tüm Domainler İçin Aktif Kılındı
