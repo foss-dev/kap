@@ -28,6 +28,9 @@ Projenin klasör yapısı aşağıdaki bağlantılar örnek alınarak oluşturul
 
 ## Durum
 
+**27.02.2019**:
+    - User Model Oluşturuldu
+
 **26.02.2019**:
 
     - Klasör Yapısının Oluşturulmasına Başlandı
