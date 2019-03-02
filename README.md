@@ -28,6 +28,13 @@ Projenin klasör yapısı aşağıdaki bağlantılar örnek alınarak oluşturul
 
 ## Durum
 
+**03.03.2019**:
+
+    - Models değiştirildi
+    - Database oluşturuldu
+    - Database seeder oluşturuldu
+    - Configler oluşturuldu.
+
 **27.02.2019**:
     
     - User Model Oluşturuldu
