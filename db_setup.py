@@ -19,11 +19,12 @@ def create_roles(ctx):
 
 def create_user(ctx):
     email = 'admin@admin'
+    name = 'John Doe'
     password = generate_password_hash('admin')
     is_active = True
     roles = 1
     user = User(
-        email=email, password=password, active=is_active, roles=roles)
+        email=email, name=name, password=password, active=is_active, roles=roles)
     
     ctx.session.add(user)
 
