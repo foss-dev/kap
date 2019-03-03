@@ -9,6 +9,8 @@
     - Modellerden mixinler kaldırıldı
     - Controller için databaseden veri çekme ve ekleme işlemleri gerçekleştirildi
     - user endpoint'i users olarak değiştirildi.
+    - Users için blueprintlerde ek URL'ler kaldırıldı. Sistem REST mimarisine yakın hale getirildi.
+    - PUT ve DELETE için requestler oluşturuldu
 
 **27.02.2019**:
     
