@@ -3,7 +3,7 @@ from flask_security import UserMixin, RoleMixin
 
 db = SQLAlchemy()
 
-class User(db.Model, UserMixin):
+class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True)
     name = db.Column(db.String(255))
@@ -21,7 +21,7 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return '<User %r' % (self.email)
 
-class Role(db.Model, RoleMixin):
+class Role(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(80), unique=True)
     description = db.Column(db.String(255))
