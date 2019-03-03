@@ -1,6 +1,9 @@
 from tracer.data.models import db, User, Role
 
-class Development(object):
+class BaseConfig(object):
+    ORIGINS = ["*"]
+
+class Development(BaseConfig):
     PORT = 5000
     DEBUG = True
     TESTING = False
