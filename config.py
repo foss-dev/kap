@@ -9,6 +9,7 @@ class Development(BaseConfig):
     TESTING = False
     ENV = 'dev'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///kap.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 config = {
