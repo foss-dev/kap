@@ -52,7 +52,7 @@ def user_info(id):
 
     return jsonify(user_object)
 
-@user.route('/create', methods=['POST'])
+@user.route('/', methods=['POST'])
 def create_user():
 
     status = {
@@ -90,7 +90,7 @@ def create_user():
     return jsonify(status)
 
 
-@user.route('/update/<int:id>', methods=['PUT'])
+@user.route('/<int:id>', methods=['PUT'])
 def update_user(id):
     
     status = {
@@ -102,7 +102,7 @@ def update_user(id):
     email = request.json['email']
     name = request.json['name']
     password = generate_password_hash(request.json['password'])
-    active = True if request.json['active'] == 'true' else False
+    active = request.json['active']
     roles = request.json['roles']
 
     user = User.query.filter_by(id=id).first()
@@ -125,5 +125,34 @@ def update_user(id):
 
         db.session.rollback()
         status['message'] = "User couldn't find"
+
+    return jsonify(status)
+
+
+@user.route('/<int:id>', methods=['DELETE'])
+def delete_user(id):
+
+    status = {
+        "id": 0,
+        "success": False,
+        "message": "Error: Couldn't delete user"
+    }
+
+    user = User.query.filter_by(id=id).first()
+
+    try:
+
+        db.session.delete(user)
+        db.session.commit()
+
+        status["id"] = id
+        status["success"] = True
+        status["message"] = "User deleted successfully"
+
+    except Exception:
+        
+        db.session.rollback()
+
+        status["message"] = "User couldn't find."
 
     return jsonify(status)
