@@ -26,6 +26,8 @@ Projenin klasör yapısı aşağıdaki bağlantılar örnek alınarak oluşturul
 
 [https://damyanon.net/post/flask-series-environment/](https://damyanon.net/post/flask-series-environment/)
 
+[https://www.restapitutorial.com/lessons/httpmethods.html](https://www.restapitutorial.com/lessons/httpmethods.html)
+
 ## Durum
 
 **03.03.2019**:
@@ -34,6 +36,9 @@ Projenin klasör yapısı aşağıdaki bağlantılar örnek alınarak oluşturul
     - Database oluşturuldu
     - Database seeder oluşturuldu
     - Configler oluşturuldu.
+    - Modellerden mixinler kaldırıldı
+    - Controller için databaseden veri çekme ve ekleme işlemleri gerçekleştirildi
+    - user endpoint'i users olarak değiştirildi.
 
 **27.02.2019**:
     
