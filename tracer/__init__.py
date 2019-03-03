@@ -14,5 +14,5 @@ config.configure_app(app)
 db.init_app(app)
 
 
-app.register_blueprint(user, url_prefix="/api/user")
+app.register_blueprint(user, url_prefix="/api/users")
 
