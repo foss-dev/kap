@@ -4,6 +4,8 @@ In this layer, we'll do operations in the [features](#features) section.
 
 ## Features
 
+- Listing All Users
+- Get User Information
 - Creating User
 - Updating User
 - Deleting User
