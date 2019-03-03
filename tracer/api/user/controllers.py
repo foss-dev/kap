@@ -53,7 +53,7 @@ def user_info(id):
     return jsonify(user_object)
 
 @user.route('/create', methods=['POST'])
-def user_roles():
+def create_user():
 
     status = {
         "id": 0,
@@ -81,9 +81,49 @@ def user_roles():
                 "message": "User added successfully"
             }
 
-    except IntegrityError as error:
+    except IntegrityError:
+
         db.session.rollback()
         status['message'] = "This email already exists in the system"
 
+
+    return jsonify(status)
+
+
+@user.route('/update/<int:id>', methods=['PUT'])
+def update_user(id):
+    
+    status = {
+        "id": 0,
+        "success": False,
+        "message": "Error: Couldn't update user"
+    }
+
+    email = request.json['email']
+    name = request.json['name']
+    password = generate_password_hash(request.json['password'])
+    active = True if request.json['active'] == 'true' else False
+    roles = request.json['roles']
+
+    user = User.query.filter_by(id=id).first()
+
+    try:
+        
+        user.email = email
+        user.name = name
+        user.password = password
+        user.active = active
+        user.roles = roles
+
+        db.session.commit()
+
+        status['id'] = id
+        status['success'] = True
+        status['message'] = "User updated successfully"
+
+    except AttributeError:
+
+        db.session.rollback()
+        status['message'] = "User couldn't find"
 
     return jsonify(status)
