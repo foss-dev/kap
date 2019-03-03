@@ -6,12 +6,14 @@ db = SQLAlchemy()
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True)
+    name = db.Column(db.String(255))
     password = db.Column(db.String(255))
     active = db.Column(db.Boolean())
     roles = db.Column(db.Integer)
 
-    def __init__(self, email, password, active, roles):
+    def __init__(self, email, name, password, active, roles):
         self.email = email
+        self.name = name
         self.password = password
         self.active = active
         self.roles = roles
