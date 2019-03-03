@@ -19,5 +19,7 @@ config.configure_app(app)
 db.init_app(app)
 
 
+app.url_map.strict_slashes = False
+
 app.register_blueprint(user, url_prefix="/api/users")
 
