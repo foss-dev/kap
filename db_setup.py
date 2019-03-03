@@ -3,6 +3,8 @@
 # Buraya ilk kurulum için ayarları gerçekleştirmeye yardım edecek bazı configler gelecek.
 # Daha önceden kurulum yapılmışsa bunu çalıştırmak yerine yeni bir çözüm üretilebilir.
 
+from werkzeug import generate_password_hash
+
 from tracer.data.models import db, User, Role
 from tracer import app
 
@@ -17,7 +19,7 @@ def create_roles(ctx):
 
 def create_user(ctx):
     email = 'admin@admin'
-    password = 'admin'
+    password = generate_password_hash('admin')
     is_active = True
     roles = 1
     user = User(
