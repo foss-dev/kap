@@ -20,6 +20,20 @@ Planned features are like below. They can change according to requirements.
  - Changing the logged data' category
 
 
+## Running Tests
+
+To run unit tests you need to use this command
+
+```bash
+python -m unittest test.YOUR_TEST_FILE_NAME
+```
+
+or you can use discover to run all tests.
+
+```bash
+python -m unittest discover
+```
+
 ## Development Resources
 
 This project follows below resources for the project structure.
@@ -30,4 +44,8 @@ This project follows below resources for the project structure.
 
 [https://www.restapitutorial.com/lessons/httpmethods.html](https://www.restapitutorial.com/lessons/httpmethods.html)
 
+[https://danidee10.github.io/2016/12/12/flask-by-example-10.html](https://danidee10.github.io/2016/12/12/flask-by-example-10.html)
 
+[https://realpython.com/python-testing/](https://realpython.com/python-testing/)
+
+[https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure](https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure)
