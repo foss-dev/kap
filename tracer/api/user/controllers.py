@@ -6,8 +6,30 @@ from tracer.data.models import db, User, Role
 
 user = Blueprint('user', __name__)
 
+@user.route('/', methods=['GET'])
+def get_users():
+    
+    users = User.query \
+        .with_entities(User.id, User.active, User.email, User.name, Role.id.label('roleid'), Role.name.label('rolename')) \
+        .join(Role, Role.id == User.roles) \
+        .all()
+    
+    user_list = []
+    
+    for user in users:
+        user_list.append({
+            "id": user.id,
+            "active": user.active,
+            "email": user.email,
+            "name": user.name,
+            "role_id": user.roleid,
+            "role_name": user.rolename
+        })
+
+    return jsonify(user_list)
+
 @user.route('/<int:id>', methods=['GET'])
-def users(id):
+def user_info(id):
 
     user = User.query \
         .with_entities(User.id, User.active, User.email, User.name, Role.id.label('roleid'), Role.name.label('rolename')) \
