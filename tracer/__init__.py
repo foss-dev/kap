@@ -4,6 +4,7 @@ from flask_cors import CORS
 import config
 
 from tracer.api.user.controllers import user
+from tracer.api.login.controllers import login
 from tracer.data.models import db
 
 
@@ -21,5 +22,6 @@ db.init_app(app)
 
 app.url_map.strict_slashes = False
 
+app.register_blueprint(login, url_prefix="/api/login")
 app.register_blueprint(user, url_prefix="/api/users")
 
