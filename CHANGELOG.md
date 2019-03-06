@@ -1,5 +1,9 @@
 # Change Log
 
+**06.03.2019**:
+
+    - Register user function has implemented
+
 **03.03.2019**:
 
     - Models değiştirildi
