@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
-from werkzeug import check_password_hash
+from werkzeug import check_password_hash, generate_password_hash
+from sqlalchemy.exc import IntegrityError
 
 from tracer.data.models import db, User
 
@@ -37,5 +38,47 @@ def login_user():
             status["roles"] = user.roles
             status["message"] = "You have successfully logged in"
     
+
+    return jsonify(status)
+
+
+@login.route('/register', methods=['POST'])
+def register():
+
+    status = {
+        "success": False,
+        "id": 0,
+        "email": None,
+        "name": None,
+        "active": False,
+        "roles": None,
+        "message": "E-mail or Password can not be blank!"
+    }
+
+    email = request.form['email']
+    password = generate_password_hash(request.form["password"])
+    name = request.form["name"]
+    active = True
+    roles = 1
+
+    user = User(email, name, password, active, roles)
+
+    db.session.add(user)
+
+    try:
+
+        db.session.commit()
+
+        if user.id > 0:
+            status = {
+                "id": user.id,
+                "success": True,
+                "message": "User added successfully"
+            }
+
+    except IntegrityError:
+
+        db.session.rollback()
+        status['message'] = "This email already exists in the system"
 
     return jsonify(status)
