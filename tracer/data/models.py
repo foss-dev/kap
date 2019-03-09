@@ -57,3 +57,26 @@ class Keys(db.Model):
     def __repr__(self):
 
         return '<Key %r>' % self.key
+
+
+class Applications(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    user_id = db.Column(db.Integer())
+    title = db.Column(db.String(255))
+    description = db.Column(db.String(255))
+    repo = db.Column(db.String(255))
+    active = db.Column(db.Boolean(), default=True)
+    created_at = db.Column(db.DateTime, default=db.func.now())
+    updated_at = db.Column(db.DateTime, onupdate=db.func.now())
+
+    def __init__(self, user_id, title, description, repo, active):
+
+        self.user_id = user_id
+        self.title = title
+        self.description = description
+        self.repo = repo
+        self.active = active
+    
+    def __repr__(self):
+
+        return '<Application %r>' % self.title
