@@ -53,3 +53,7 @@ class Keys(db.Model):
         self.application_id = application_id
         self.key = key
         self.active = active
+    
+    def __repr__(self):
+
+        return '<Key %r>' % self.key
