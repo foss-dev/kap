@@ -2,6 +2,7 @@ from tracer.data.models import db, User, Role
 
 class BaseConfig(object):
     ORIGINS = ["*"]
+    SECRET_KEY = '\xb6]V~\x93\xcb\x1c\x12\xec\xcf\xa0&\x81b\xfc\x1a\xdc\x8b\xefAu\xa6\xd9\x9c'
 
 class Development(BaseConfig):
     PORT = 5000
