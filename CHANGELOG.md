@@ -1,9 +1,13 @@
 # Changelog
 
 
-## (unreleased)
+## [unreleased]
 
 ### Other
+
+* I updated requirements file and updated CHANGELOG.md file. [aligoren]
+
+* I added documentation for applications layer. [aligoren]
 
 * I added auto CHANGELOG generator. Repo uses [https://github.com/vaab/gitchangelog](https://github.com/vaab/gitchangelog) now. [aligoren]
 
@@ -27,8 +31,6 @@
 
 * Documentation updated for register api endpoint in login layer. [aligoren]
 
-* Changelog added. [aligoren]
-
 * I added documentation for login API. [aligoren]
 
 * I added login API. [aligoren]
@@ -38,8 +40,6 @@
 * I disabled sqlalchemy's track modification setting. [aligoren]
 
 * I added user test for create and select queries. [aligoren]
-
-* Changelog file was changed. I added changes of today. [aligoren]
 
 * User API documentation was updated. [aligoren]
 
@@ -92,8 +92,6 @@
 * Fix typo. [aligoren]
 
 * Unutulan init ve repr fonksiyonları eklendi. [aligoren]
-
-* Changelog değişti. [aligoren]
 
 * Kullanıcı model'ini oluşturdum. Henüz migration gerçekleştirmedim. #1 fixes olur. [aligoren]
 
