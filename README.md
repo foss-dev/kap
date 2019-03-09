@@ -49,3 +49,7 @@ This project follows below resources for the project structure.
 [https://realpython.com/python-testing/](https://realpython.com/python-testing/)
 
 [https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure](https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure)
+
+[https://stackoverflow.com/questions/534839/how-to-create-a-guid-uuid-in-python](https://stackoverflow.com/questions/534839/how-to-create-a-guid-uuid-in-python)
+
+[https://blog.miguelgrinberg.com/post/the-new-way-to-generate-secure-tokens-in-python](https://blog.miguelgrinberg.com/post/the-new-way-to-generate-secure-tokens-in-python)
