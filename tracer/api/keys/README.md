@@ -8,7 +8,7 @@ If the user removes an API key, applications shouldn't work with the deleted API
 
 - Create API Key
 - List Application API Keys (Active / Inactive)
-- Remove API Key
+- Update API Key Status
 
 ## Info
 
@@ -37,4 +37,45 @@ key_obj = {
 }
 
 generated_key = generate_key(key_obj)
+```
+
+To get all application keys endpoint should be like this `http://yourdomain.tld/api/keys/USER_ID/APPLICATION_ID`
+
+If keys exists, you will see an output like below:
+
+```js
+[
+  {
+    "active": false,
+    "application_id": 1,
+    "created_at": "09.03.2019 12:47:26",
+    "id": 1,
+    "key": "717aa13d-c017-372b-ae0a-d72b3861bb4e",
+    "updated_at": null,
+    "user_id": 1
+  },
+  {
+    "active": true,
+    "application_id": 1,
+    "created_at": "09.03.2019 15:59:41",
+    "id": 2,
+    "key": "86cfdcdd-2875-3310-a4ee-d9541dad5b43",
+    "updated_at": null,
+    "user_id": 1
+  }
+]
+```
+
+To update key status you need to use this endpoint
+
+`api/keys/update/KEY_ID`
+
+You will send PUT request.
+
+And JSON body will be like this:
+
+```json
+{
+	"active": false
+}
 ```
