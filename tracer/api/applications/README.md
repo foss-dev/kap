@@ -8,9 +8,6 @@ In this layer, users will be able to create their applications to track their lo
 - Edit Application
 - Delete Application
 - Application Details
-- Application Logs
-- Application Log Details (If possible elaborate explanation or StackOverflow URL etc.)
-- Application Log Filtering
 
 ## Info
 
@@ -18,7 +15,7 @@ For the first, we will do the first four in the features list. I'll update this 
 
 Endpoints will be like this;
 
-**Edit 10.03.2019:**: Logs will be managed in a different layer. This layer only should work for application info.
+**Edit 10.03.2019:** Logs will be managed in a different layer. This layer only should work for application info.
 
 ### CREATE
 
