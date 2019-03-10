@@ -18,6 +18,8 @@ For the first, we will do the first four in the features list. I'll update this 
 
 Endpoints will be like this;
 
+**Edit 10.03.2019:**: Logs will be managed in a different layer. This layer only should work for application info.
+
 ### CREATE
 
 **Method:** POST
