@@ -113,6 +113,8 @@ class ExceptionTypes(db.Model):
 
 class Logs(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
+    user_id = db.Column(db.Integer())
+    application_id = db.Column(db.Integer())
     language_id = db.Column(db.Integer())
     exception_type_id = db.Column(db.Integer())
     line_number = db.Column(db.Integer())
