@@ -1,34 +1,55 @@
-# Kap Loglama ve Log İzleme Sistemi
+# Kap Error Logging ve Monitoring System
 
-Kap API tabanlı basit loglama sistemidir. Kendinize özel olarak uygulamalar oluşturup bu uygulamalarda oluşan hataları takip edebilirsiniz.
+Kap is a simplistic API based error logging system. You can create applications and track their errors. 
 
-## Planlanan Özellikler
+*This is an experimental repo. You shouldn't use it in production if you're not sure if it works as you expected.*
 
-Planlanan özellikler aşağıdaki gibidir. Gidişata göre değişim gösterebilirler.
+## Planned Features
 
- - Kullanıcıların Giriş Yapabileceği Web Arayüzü
- - Kullanıcıların Uygulama Ekleyebilmesi
- - Uygulamalar İçin Özel Anahtarlar Oluşturma
- - Tarih Aralığına Göre Hata Filtreleme
- - Hatalara Dair Varsa Linkler
- - Mümkünse Hata Türlerine Göre Filtreleme
- - Loglanan Hataların Aktiflik durumu
- - Genel Log Türleri
- - Yeni Log Kategorileri Ekleme
- - Loglanmış Verinin Kategorisini Değiştirme.
+Planned features are like below. They can change according to requirements.
+
+ - Web UI to users
+ - User applications
+ - Special API keys for each application
+ - Filtering by date range
+ - If it possible, links for errors' explanation by the vendor.
+ - Filtering by logging types.
+ - Log status (Active / Inactive)
+ - General log types
+ - Adding new log categories
+ - Changing the logged data' category
 
 
-## Uygulama Kaynağı
+## Running Tests
 
-Projenin klasör yapısı aşağıdaki bağlantılar örnek alınarak oluşturulmuştur
+To run unit tests you need to use this command
+
+```bash
+python -m unittest test.YOUR_TEST_FILE_NAME
+```
+
+or you can use discover to run all tests.
+
+```bash
+python -m unittest discover
+```
+
+## Development Resources
+
+This project follows below resources for the project structure.
 
 [https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications)
 
 [https://damyanon.net/post/flask-series-environment/](https://damyanon.net/post/flask-series-environment/)
 
-## Durum
+[https://www.restapitutorial.com/lessons/httpmethods.html](https://www.restapitutorial.com/lessons/httpmethods.html)
 
-**26.02.2019**:
+[https://danidee10.github.io/2016/12/12/flask-by-example-10.html](https://danidee10.github.io/2016/12/12/flask-by-example-10.html)
 
-    - Klasör Yapısının Oluşturulmasına Başlandı
-    - Cors Tüm Domainler İçin Aktif Kılındı
+[https://realpython.com/python-testing/](https://realpython.com/python-testing/)
+
+[https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure](https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure)
+
+[https://stackoverflow.com/questions/534839/how-to-create-a-guid-uuid-in-python](https://stackoverflow.com/questions/534839/how-to-create-a-guid-uuid-in-python)
+
+[https://blog.miguelgrinberg.com/post/the-new-way-to-generate-secure-tokens-in-python](https://blog.miguelgrinberg.com/post/the-new-way-to-generate-secure-tokens-in-python)
