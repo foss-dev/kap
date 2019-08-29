@@ -1,4 +1,4 @@
-# Kap Error Logging ve Monitoring System
+# Kap Error Logging and Monitoring System
 
 Kap is a simplistic API based error logging system. You can create applications and track their errors. 
 
